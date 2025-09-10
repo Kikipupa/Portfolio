@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #181716;
+  margin: 0;
+  background-color: #fdf9ed;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fdf9ed;
+}
+
+.nav-bar {
+  padding: 20px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 90%;
+  letter-spacing: -1.5px;
+}
+
+.links {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.nav-link-elem {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-link-elem:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+.nav-link-elem.clicked {
+  color: #fba679;
+}
+
+.inner-wrapper {
+  margin: 0 16px;
+}
+
+.contact-btn {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-text {
+  margin-right: 10px;
+  position: relative;
+}
+
+.contact-btn svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover svg {
+  transform: translateX(0);
+}
+
+.contact-btn:active svg {
+  transform: scale(0.9);
+}
+
+.btn-text:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.contact-btn:hover .btn-text:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.banner-section {
+  height: calc(100vh - 260px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 130px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.banner-inner-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 230px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -20px;
+  line-height: 70%;
+}
+
+.banner-title {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 82%;
+  z-index: 2;
+}
+
+.img-block {
+  position: absolute;
+  top: 21%;
+  right: 33%;
+  z-index: 1;
+}
+
+.profile-img {
+  height: 520px;
+}
+
+.color-block {
+  width: 656px;
+  height: 380px;
+  z-index: 0;
+  background-color: #fba679;
+  position: absolute;
+  top: 35%;
+  right: 31%;
+  padding: 0 25px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.color-block-text {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.info-text {
+  width: 470px;
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  right: 37%;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 2px;
+}
+
+.cv-button {
+  position: relative; /* needed for absolute child (.under-box) */
+  display: inline-block;
+  margin-bottom: 32px;
+  text-decoration: none;
+  color: #181716;
+}
+
+.upper-box {
+  position: relative;
+  z-index: 2;
+  min-width: 100px;
+  height: 40px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: #181716;
+  color: aliceblue;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.cv-button:hover .upper-box {
+  transform: translate(-3px, -3px);
+}
+
+.cv-button:active .upper-box {
+  transform: translate(5px, 5px);
+  transition: all 0.2s ease;
+}
+
+.under-box {
+  position: absolute;
+  z-index: 1;
+  border: 2px solid #181716;
+  width: 130px;
+  height: 56px;
+  top: 6%;
+  left: 2%;
+  pointer-events: none; /* prevents it from capturing the mouse */
+}
+
+.bottom-part {
+  width: 50px;
+  margin-bottom: 38px;
+  transition: all 0.3s ease;
+}
+
+.bottom-part:hover {
+  transform: translateY(8px);
+  cursor: pointer;
+}
+
+.about-section {
+  margin-top: 80px;
+  padding: 0 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+.dot {
+  color: #fba679;
+}
+
+.orange-block {
+  width: 10px;
+  height: 200px;
+  background-color: #fba679;
+}
+
+.about-text-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.about-text {
+  max-width: 1000px;
+  margin: 0;
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-stack {
+  margin: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating {
+  display: flex;
+  gap: 14px;
+}
+
+.point {
+  width: 22px;
+  height: 22px;
+  background-color: rgb(111, 111, 111);
+}
+
+.list-elem-text {
+  font-size: 30px;
+}
+
+.list-elem {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.orange {
+  background-color: #fba679;
+}
+
+.tech-img {
+  width: 230px;
+}
+
+.left-side {
+  display: flex;
+  gap: 100px;
+}
+
+.tech-title {
+  text-align: end;
+}
+
+.foot {
+  height: 40vh;
+  background-color: #fba679;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.white-dot {
+  color: #fdf9ed;
+}
+
+.contact-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+}
+
+.email {
+  margin-top: 6px;
+  font-size: 28px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #181716;
+}
+
+.social-icon {
+  width: 40px;
+}
+
+.social-link {
+  text-decoration: none;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.foot-title {
+  margin-top: 10px;
+}
+
+.contact-link {
+  color: #181716;
+  text-decoration: none;
+}
+
+.nav-link-elem.active {
+  color: #fba679; /* or your highlight color */
+}
