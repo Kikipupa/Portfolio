@@ -1,5 +1,3 @@
-import "./style.css";
-
 const button = document.querySelector(".cv-button");
 const navLinks = document.querySelectorAll(".nav-link-elem");
 
