@@ -189,6 +189,8 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   font-weight: 500;
   font-size: 12px;
   margin-bottom: 12px;
+
+  display: none;
 }
 
 .info-text {
@@ -451,6 +453,7 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     font-weight: 500;
     font-size: 14px;
     margin-bottom: 12px;
+    display: block;
   }
 }
 
@@ -520,6 +523,7 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 50px;
+    display: block;
   }
   .cv-button {
     position: relative; /* needed for absolute child (.under-box) */
