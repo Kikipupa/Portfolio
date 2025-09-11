@@ -1,8 +1,15 @@
 const button = document.querySelector(".cv-button");
 const navLinks = document.querySelectorAll(".nav-link-elem");
+const hamburger = document.querySelector(".hamburger");
+const links = document.querySelector(".links");
 
 button.addEventListener("click", () => {
   button.classList.toggle("filled");
+});
+
+hamburger.addEventListener("click", () => {
+  links.classList.toggle("active");
+  hamburger.classList.toggle("active");
 });
 
 const sections = document.querySelectorAll("section");
