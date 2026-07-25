@@ -1104,6 +1104,7 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 
 .project-page {
   display: none;
+  padding: 0 40px;
   width: 100vw;
   min-height: 100vh;
   position: relative;
@@ -1116,7 +1117,8 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 
 .project-header {
   width: 100vw;
-  padding: 120px 40px 60px 40px;
+  padding-top: 120px;
+  padding-bottom: 60px;
   border-bottom: 0.5px solid #181716;
 }
 
@@ -1186,7 +1188,7 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 /* SECTION STYLING */
 .project-section {
   width: 100vw;
-  padding: 80px 40px;
+  padding: 80px 0;
   border-bottom: 0.5px solid #181716;
 }
 
