@@ -7,21 +7,22 @@ const projectsData = {
   hops: {
     title: "HopS Redesign",
     tagline:
-      "Overhauled the visual design and UX of TH Köln's scheduling system",
+      "Overhauled the visual design and UX of TH Cologne's scheduling system",
     meta: [
       { label: "Role", value: "UX/UI Designer, Researcher" },
-      { label: "Timeline", value: "14 weeks (Semester Project)" },
-      { label: "Tools", value: "Figma, User Testing, Prototyping" },
-      { label: "Course", value: "Interaction Design Studio, TH Köln" },
+      { label: "Timeline", value: "6 weeks (Semester Project)" },
+      { label: "Tools", value: "Figma, Miro" },
+      { label: "Course", value: "Screen Design, TH Köln" },
+      { label: "Authors", value: "Anna Protsenko, Galyna Fylonok" },
     ],
     problem: `
-            <p><strong>The Challenge:</strong> TH Köln's scheduling system (HopS) is outdated and confusing. Students struggle to find courses, register for classes, and understand their schedules. The interface feels disconnected from modern design standards.</p>
-            <p><strong>The Insight:</strong> A scheduling app is used multiple times daily. Poor UX compounds frustration at scale.</p>
-            <p><strong>The Opportunity:</strong> Redesign HopS to be intuitive, visually cohesive, and actually enjoyable to use.</p>
+            <p><strong>The Challenge:</strong> TH Cologne's scheduling system (HopS) is outdated and confusing. Students struggle to find courses, booking rooms, and understand their schedules. The interface feels disconnected from modern design standards.</p>
+            <p><strong>The Insight:</strong> A scheduling system is used multiple times daily, primarily 'on the go', because many students just want to quickly look up where and when the next course is. The system is not accessible for all students.</p>
+            <p><strong>The Opportunity:</strong> Redesign HopS to be intuitive, visually cohesive, accessible and actually enjoyable to use.</p>
           `,
-    designQuestion: `<p><strong>Design Question:</strong> How might we make course planning and scheduling less frustrating and more intuitive for TH Köln students?</p>`,
+    designQuestion: `<p><strong>Design Question:</strong> How might we make course planning and scheduling less frustrating and more intuitive, accessible and enjoyable for TH Cologne students?</p>`,
     research: `
-            <p><strong>Research Method:</strong> I conducted 8 user interviews with students across different semesters and programs. I also reviewed competitor apps (Uni Cologne portal, other university systems) and observed students using HopS in the wild.</p>
+            <p><strong>Research Method:</strong> We conducted 3 user interviews with students across different semesters and programs. We also reviewed other planning apps and observed students using HopS in the wild.</p>
           `,
     findings: [
       {
@@ -30,11 +31,11 @@ const projectsData = {
       },
       {
         title: "Finding 2",
-        text: "Course search is time-consuming. No smart filters or recommendations based on program.",
+        text: "It is not possible to personalise your own schedule.",
       },
       {
         title: "Finding 3",
-        text: "The visual design feels outdated, which undermines trust in the system.",
+        text: "The visual design feels outdated, and visual overloaded which undermines trust in the system.",
       },
       {
         title: "Finding 4",
@@ -42,43 +43,44 @@ const projectsData = {
       },
     ],
     approach: `
-            <p><strong>Ideation & Sketching:</strong> I explored 3 different information architectures:</p>
+            <p><strong>Ideation & Sketching:</strong> We explored many different ways of organising a schedule. For this project, we wanted to focus on personalisation, so we decided to show a personal schedule in different views first. We decided to include three views so that students can switch between them as they wish.</p>
             <ul>
-              <li>Timeline-first (week view with day breakdown)</li>
-              <li>Course-first (all courses, then schedule view)</li>
-              <li>Semester view (full semester overview, drill-down)</li>
+              <li>Daily view</li>
+              <li>Weekly view</li>
+              <li>Monthly view</li>
             </ul>
-            <p style="margin-top: 1rem;">Testing with 3 users showed the <strong>semester overview → week view flow performed best</strong>. Users wanted to see the big picture first, then drill into details.</p>
+            <p style="margin-top: 1rem;">            Testing with three users showed us that this was the best decision, as students want to see their personal schedule with different viewing options, rather than the entire semester schedule with irrelevant courses.
+</p>
           `,
     solution: `
             <p>The final redesign centers around a <strong>clean, modern interface</strong> with smart information hierarchy. Students can see their full schedule, easily search courses, and understand requirements at a glance.</p>
           `,
     features: [
       {
-        title: "📅 Week View",
-        text: "See your entire week at a glance. Color-coded by course type or program.",
+        title: "Different types of Views",
+        text: "See your schedule as you want: Daily, Weekly or Monthly. Color-coded by course type or program.",
       },
       {
-        title: "🔍 Smart Search",
-        text: "Filter by program, time, professor, room location. Save favorite courses.",
+        title: "Smart Search",
+        text: "Filter by type, semester, course or current semester year. Save favorite courses.",
       },
       {
-        title: "📱 Mobile-First",
+        title: "Mobile-First",
         text: "Optimized for phone usage with swipe navigation and compact layouts.",
       },
       {
-        title: "🔔 Smart Notifications",
-        text: "Get reminders for course registration deadlines and schedule changes.",
+        title: "Room booking",
+        text: "Find a free room to learn as a student or book you a room for your course as a teacher",
       },
     ],
     decisions: [
       {
-        title: "Why Week View?",
-        text: "Most UIs default to month view, but students need to see their actual schedule. A week view is the right level of detail for busy students.",
+        title: "Why Different Views?",
+        text: "Most UIs default to one sort of view, but students need to see their actual schedule in different ways to plan their day and even month.",
       },
       {
         title: "Color System",
-        text: "I used distinct colors for each course type (lecture, seminar, lab) and program. This reduces cognitive load and makes scanning faster.",
+        text: "We used distinct colors for each course type (lecture, seminar, lab) and program combined with text and icons. This reduces cognitive load, makes or design more accessible and makes scanning faster.",
       },
     ],
     learnings: [
@@ -377,14 +379,14 @@ function loadProject(projectId) {
   document.getElementById("projectFeatures").innerHTML = featuresHTML;
 
   // Set Gallery (placeholder)
-  const galleryHTML = `
-          <div class="gallery-item tall">[Screen: Main View]</div>
-          <div class="gallery-item">[Screen: Detail 1]</div>
-          <div class="gallery-item">[Screen: Detail 2]</div>
-          <div class="gallery-item">[Screen: Action]</div>
-          <div class="gallery-item wide">[Screen: Full Interaction Flow]</div>
-        `;
-  document.getElementById("projectGallery").innerHTML = galleryHTML;
+  //const galleryHTML = `
+  //       <div class="gallery-item tall">[Screen: Main View]</div>
+  //       <div class="gallery-item">[Screen: Detail 1]</div>
+  //       <div class="gallery-item">[Screen: Detail 2]</div>
+  //       <div class="gallery-item">[Screen: Action]</div>
+  //       <div class="gallery-item wide">[Screen: Full Interaction Flow]</div>
+  //      `;
+  // document.getElementById("projectGallery").innerHTML = galleryHTML;
 
   // Set Design Decisions
   const decisionsHTML = project.decisions
