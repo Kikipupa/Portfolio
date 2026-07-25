@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,220 +11,265 @@
     <div class="main-content">
       <header>
         <nav class="nav-bar">
-          <div class="name">Anna<br />Protsenko</div>
-          <div class="links">
-            <a class="nav-link-elem" href="#home"
-              >[<span class="inner-wrapper">Home</span>]</a
-            >
-            <a class="nav-link-elem" href="#about"
-              >[<span class="inner-wrapper">About</span>]</a
-            >
-            <a class="nav-link-elem" href="#footer"
-              >[<span class="inner-wrapper">Connect</span>]</a
-            >
+          <div class="logo-name">Anna<br />Protsenko</div>
+          <div class="location">Cologne, Germany</div>
+          <div class="nav-items">
+            <a class="nav-item" href="">Works</a>
+            <a class="nav-item" href="">About</a>
+            <a class="nav-item" href="">Contact</a>
           </div>
-          <div class="contact-btn">
-            <span class="btn-text">
-              <a class="contact-link" href="mailto:protsenko.anyta@gmail.com"
-                >Contact me</a
-              >
-            </span>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <path
-                d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
-              />
-            </svg>
-          </div>
-          <input class="checkbox desktop-hide" type="checkbox" name="" id="" />
-          <div class="hamburger-lines desktop-hide">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-
-          <div class="menu-items desktop-hide">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#footer">Connect</a></li>
-          </div>
+          <label class="burger" for="burger">
+            <input type="checkbox" id="burger" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
         </nav>
       </header>
       <main>
-        <section class="banner-section" id="home">
-          <div class="banner-title">
-            <span class="banner-inner-text">Frontend Engineer</span><br />
-            <span class="banner-inner-text-second">& Designer</span>
+        <div class="project-page" id="projectPage">
+          <!-- Header -->
+          <div class="project-header">
+            <button class="project-back-btn" onclick="goBackToProjects()">
+              ← Back
+            </button>
+            <h1 class="project-title" id="projectTitle">Project Title</h1>
+            <p class="project-tagline" id="projectTagline">
+              Project description
+            </p>
+            <div class="project-meta" id="projectMeta"></div>
           </div>
-          <div class="img-block">
-            <img class="profile-img" src="./public/profile.jpg" alt="photo" />
-          </div>
-          <div class="color-block">
-            <div class="color-block-text">
-              | Web development <br />
-              | UX/UI Design
+
+          <!-- Problem Section -->
+          <div class="project-section">
+            <h2 class="project-section-title">Problem & Opportunity</h2>
+            <div class="section-two-col">
+              <div class="section-text" id="projectProblem"></div>
+              <div class="highlight-box" id="projectDesignQuestion"></div>
             </div>
-            <a
-              href="./public/Anna_Protsenko_CV_Eng.pdf"
-              target="_blank"
-              class="cv-button"
-            >
-              <div class="upper-box">My CV</div>
-              <div class="under-box"></div>
-            </a>
           </div>
-          <div class="info-text">
-            I love <span class="highlight">coding</span> and
-            <span class="highlight">designing</span>, creating digital
-            experiences that are both functional and creative.
+
+          <!-- Research Section -->
+          <div class="project-section">
+            <h2 class="project-section-title">Research & Discovery</h2>
+            <div class="section-full">
+              <div class="section-text" id="projectResearch"></div>
+              <div class="card-grid" id="projectFindings"></div>
+            </div>
           </div>
-          <div class="bottom-part">
-            <a href="#about">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <path
-                  d="M26.29 20.29 18 28.59V0h-2v28.59l-8.29-8.3-1.42 1.42 10 10a1 1 0 0 0 1.41 0l10-10z"
-                  data-name="2-Arrow Down"
-                />
-              </svg>
-            </a>
+
+          <!-- Approach Section -->
+          <div class="project-section">
+            <h2 class="project-section-title">Design Approach</h2>
+            <div class="section-two-col">
+              <div class="section-text" id="projectApproach"></div>
+              <div
+                id="projectApproachVisual"
+                style="
+                  background: #fafafa;
+                  border: 0.5px solid #181716;
+                  min-height: 300px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #bbb;
+                "
+              >
+                [Design Exploration Visuals]
+              </div>
+            </div>
           </div>
-        </section>
-        <section class="about-section" id="about">
-          <div class="about-block">
-            <h1 class="about-title">About Me<span class="dot">.</span></h1>
-            <div class="about-text-wrapper">
-              <div class="orange-block"></div>
-              <p class="about-text">
-                I’m a Media Informatics student with a strong passion for web
-                development and digital design. Over the past few years, I have
-                gained practical experience working with Angular, JavaScript,
-                HTML, and CSS, allowing me to create responsive, modern, and
-                user-friendly web applications. <br />
-                <span class="second-part-text"
-                  >I’m especially motivated by the idea of making technology
-                  more human — developing digital experiences that are not only
-                  functional but also intuitive and enjoyable to use. I enjoy
-                  experimenting with new approaches, exploring creative
-                  solutions, and constantly learning to stay ahead in a
-                  fast-evolving field.</span
-                >
+
+          <!-- Solution Section -->
+          <div class="project-section">
+            <h2 class="project-section-title">Solution</h2>
+            <div class="section-full">
+              <div class="section-text" id="projectSolution"></div>
+              <div class="card-grid" id="projectFeatures"></div>
+              <div class="image-gallery" id="projectGallery"></div>
+            </div>
+          </div>
+
+          <!-- Design Decisions Section -->
+          <div class="project-section">
+            <h2 class="project-section-title">Key Design Decisions</h2>
+            <div class="section-two-col" id="projectDecisions"></div>
+          </div>
+
+          <!-- Learnings Section -->
+          <div class="project-section">
+            <h2 class="project-section-title">Learnings & Reflection</h2>
+            <div class="card-grid" id="projectLearnings"></div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="project-section">
+            <h2 class="project-section-title">View the Full Work</h2>
+            <div class="section-text">
+              <p>
+                Explore the interactive prototype, case study, and design files.
               </p>
             </div>
+            <div class="project-cta-section" id="projectCTA"></div>
           </div>
-          <div class="tech-stack">
-            <div class="left-side">
-              <img
-                class="tech-img"
-                src="./public/angular-svgrepo-com.svg"
-                alt="angular"
-              />
-              <img
-                class="tech-img"
-                src="./public/css3-02-svgrepo-com.svg"
-                alt="css"
-              />
-              <img
-                class="tech-img"
-                src="./public/html-124-svgrepo-com.svg"
-                alt="html"
-              />
-            </div>
-            <div class="right-side">
-              <h1 class="about-title tech-title">
-                Tech Stack<span class="dot">.</span>
-              </h1>
-              <div class="list">
-                <div class="list-elem">
-                  <span class="list-elem-text">Angular</span>
-                  <div class="rating">
-                    <div class="point"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                  </div>
-                </div>
-                <div class="list-elem">
-                  <span class="list-elem-text">TypeScript</span>
-                  <div class="rating">
-                    <div class="point"></div>
-                    <div class="point"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                  </div>
-                </div>
-                <div class="list-elem">
-                  <span class="list-elem-text">HTML/CSS</span>
-                  <div class="rating">
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                  </div>
-                </div>
 
-                <div class="list-elem">
-                  <span class="list-elem-text">React</span>
-                  <div class="rating">
-                    <div class="point"></div>
-                    <div class="point"></div>
-                    <div class="point"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                  </div>
-                </div>
-                <div class="list-elem">
-                  <span class="list-elem-text">Three.js</span>
-                  <div class="rating">
-                    <div class="point"></div>
-                    <div class="point"></div>
-                    <div class="point"></div>
-                    <div class="point orange"></div>
-                    <div class="point orange"></div>
-                  </div>
-                </div>
+          <!-- Navigation to Other Projects -->
+          <div class="project-nav" id="projectNavigation"></div>
+        </div>
+        <section class="hero-section">
+          <div class="banner-text">
+            <h1 class="banner-text-title">Hi there!</h1>
+            <p class="banner-text-inner">
+              I'm Anna <br />
+              UX/UI & Graphic Designer<span class="dot">.</span>
+            </p>
+          </div>
+          <a class="banner-arrow" href="#projects"
+            ><img class="banner-arrow-img" src="./public/arrow.svg" alt=""
+          /></a>
+          <img class="vector-left vector" src="./public/Vector4.svg" alt="" />
+          <img class="vector-right vector" src="./public/Vector3.svg" alt="" />
+        </section>
+        <section id="projects" class="projects">
+          <div class="top-text-container">
+            <p class="top-text">Works</p>
+          </div>
+          <div class="projects-container">
+            <div class="top-info">
+              <span class="top-info-projects">Projects</span>
+              <span class="top-info-year">Year</span>
+            </div>
+            <div class="project-elem">
+              <img
+                class="img-placeholder"
+                src="./public/Free iPhone Air Mockup on Rock (Mockuuups Studio).png"
+                alt="image"
+              />
+              <div class="middle-elems">
+                <div class="small-cube"></div>
+                <span class="project-title-main">HopS Redesign</span>
+                <span class="project-categories">Web / App / Redesign</span>
+                <p class="project-description">
+                  Overhauled the visual design and UX of TH Köln's HOPS
+                  scheduling system, addressing usability gaps and introducing
+                  new features to close functional shortcomings.
+                </p>
+                <a
+                  onclick="loadProject('hops')"
+                  target="_blank"
+                  class="project-cta"
+                >
+                  <div class="upper-box">See More</div>
+                  <div class="under-box"></div>
+                </a>
               </div>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-elem">
+              <img
+                class="img-placeholder"
+                src="./public/27002.jpg"
+                alt="image"
+              />
+              <div class="middle-elems">
+                <div class="small-cube"></div>
+                <span class="project-title-main">Project 2</span>
+                <span class="project-categories"
+                  >Web / Beauty / E-Commerce</span
+                >
+                <p class="project-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean tincidunt risus ac lacus tincidunt fringilla. Curabitur
+                  et lectus semper, euismod odio id, semper urna.
+                </p>
+                <a target="_blank" class="project-cta">
+                  <div class="upper-box">See More</div>
+                  <div class="under-box"></div>
+                </a>
+              </div>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-elem">
+              <img
+                class="img-placeholder"
+                src="./public/27002.jpg"
+                alt="image"
+              />
+              <div class="middle-elems">
+                <div class="small-cube"></div>
+                <span class="project-title-main">Project 3</span>
+                <span class="project-categories"
+                  >Web / Beauty / E-Commerce</span
+                >
+                <p class="project-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean tincidunt risus ac lacus tincidunt fringilla. Curabitur
+                  et lectus semper, euismod odio id, semper urna.
+                </p>
+                <a target="_blank" class="project-cta">
+                  <div class="upper-box">See More</div>
+                  <div class="under-box"></div>
+                </a>
+              </div>
+              <span class="project-year">2025</span>
+            </div>
+          </div>
+        </section>
+        <section class="about-me">
+          <div class="about-me-title-container">
+            <h1 class="about-me-title">About me</h1>
+            <div class="text-highlight"></div>
+          </div>
+          <div class="about-me-content">
+            <div class="about-me-content-text-btn">
+              <p class="about-me-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                tincidunt risus ac lacus tincidunt fringilla. Curabitur et
+                lectus semper, euismod odio id, semper urna. In porta pulvinar
+                dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Aenean tincidunt risus ac lacus tincidunt fringilla.
+                Curabitur et lectus semper, euismod odio id, semper urna. In
+                porta pulvinar dapibus. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Aenean tincidunt risus ac lacus tincidunt
+                fringilla. Curabitur et lectus semper, euismod odio id, semper
+                urna. In porta pulvinar dapibus.
+              </p>
+              <a
+                target="_blank"
+                class="cv-cta"
+                href="./public/Anna_Protsenko_CV_Eng.pdf"
+              >
+                <div class="upper-box-cv">My CV</div>
+                <div class="under-box-cv"></div>
+              </a>
+            </div>
+            <div class="about-me-content-photo">
+              <img class="profile-img" src="./public/profile.jpg" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="footer">
+          <hr class="line" />
+          <div class="footer-inner-part">
+            <div class="footer-text-container">
+              <p class="footer-text">
+                Let's work <br />
+                together<span class="dot">.</span>
+              </p>
+              <span class="email">protsenko.anyta@gmail.com</span>
+            </div>
+            <div class="footer-nav">
+              <div class="footer-nav-left-part">
+                <a class="nav-item footer-nav-item" href="">[ Instagram ]</a>
+                <a class="nav-item footer-nav-item" href="">[ Linkedin ]</a>
+                <a class="nav-item footer-nav-item" href="">[ Behance ]</a>
+                <a class="nav-item footer-nav-item" href="">[ Telegram ]</a>
+              </div>
+              <div class="footer-nav-right-part">2026 ©</div>
             </div>
           </div>
         </section>
       </main>
-      <section class="foot" id="footer">
-        <h1 class="foot-title about-title">
-          Lets connect <span class="white-dot">.</span>
-        </h1>
-        <p class="contact-email">
-          Write me a message <br />
-          <a href="mailto:protsenko.anyta@gmail.com" class="email"
-            >protsenko.anyta@gmail.com</a
-          >
-        </p>
-        <div class="social-buttons">
-          <a
-            class="social-link"
-            href="https://www.linkedin.com/in/anna-protsenko-8447711b9"
-            target="_blank"
-          >
-            <img
-              class="social-icon"
-              src="./public/linkedin-svgrepo-com.svg"
-              alt="linkedin"
-            />
-          </a>
-          <a
-            class="social-link"
-            href="https://github.com/Kikipupa"
-            target="_blank"
-          >
-            <img
-              class="social-icon"
-              src="./public/github-142-svgrepo-com.svg"
-              alt="github"
-            />
-          </a>
-        </div>
-      </section>
     </div>
   </body>
 </html>
